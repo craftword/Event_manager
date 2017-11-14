@@ -10,21 +10,112 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/home.css"/>
       
   </head>
   <body class="bkgrd">
       <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-6">
-              <div class="row justify-content-center ">
+          
+        <div class="col-6 offset-md-3">
+              <div class="row justify-content-center">
                   <a href="index.html"><img src="img/logo.png" alt="Owanbe Logo" class="logo img-fluid"/></a>
               </div>
-              
+              <div class="row justify-content-center caption">
+                    EVENT MANAGEMENT APP
+              </div>
+              <div class="row justify-content-center moto">
+                    Book your Space for any Event, you can dream of 
+              </div>
+              <div class="row justify-content-center sign_button ">
+                  <div class="col-6">
+                        <button type="button" class="btn btn-danger btn-lg btn-block" data-toggle="modal" data-target="#mySignUp">
+                            SUBSCRIBE
+                        </button>  
+                  </div>
+                  <div class="col-6">
+                        <button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#mySignIn">
+                            SIGNIN
+                        </button>
+                  </div>    
+              </div>
           </div>
-          <div class="col-md-3"></div>
+          
       </div>
+ <!-- Subscribe Modal -->
+    <div class="modal fade" id="mySignUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">REGISTRATION</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="pages/dashboard.html">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <p id="passwordHelpBlock" class="form-text text-muted">
+                               <i> Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.</i>
+                            </p>
+                        </div>
+                        <div class="form-group">
+                            <label for="fullname">Fullname</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter fullname">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="phoneHelp" placeholder="Enter phone">
+                        </div>
+                        <div class="col-md-10 offset-md-1">
+                            <button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
+                        </div>
+                    </form>
 
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="mySignIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">LOGIN</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="pages/dashboard.html">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                       </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="col-md-10 offset-md-1">
+                            <button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            
+            </div>
+        </div>
+    </div>
 
 
 

@@ -1,0 +1,35 @@
+/* Welcome to Event Manager Project
+*
+*/
+
+/************ Login & Registration Section ******************/
+html,body{
+    height:100%;
+}
+
+body {
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;    
+       
+}
+
+.logo {
+    margin-top: 50px;  
+}
+.caption {
+    font-family:"Berlin San FB";
+    font-size: 40px;
+    font-weight:bold;
+    color: #FFF;
+    text-shadow: 2px 2px #7D46C5; 
+}
+.moto {
+    font-family:"Monotype Corsiva";
+    font-size: 30px;
+    text-shadow: 2px 2px #000;
+    color: #fff;  
+}
+.sign_button {
+    margin-top: 50px;
+}
