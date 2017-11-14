@@ -1,0 +1,70 @@
+/* Welcome to Event Manager Project
+*
+*/
+body {
+    height: 100%;
+}
+ /************ User Administration Section ******************/
+ /* Creates a vertical nav starting at 768px (sm) */
+@media (min-width: 768px) {
+    .vertical-nav {
+                margin-top: 25px;
+                
+            }
+
+    .vertical-nav .collapse {
+        display: block;
+    }
+}
+
+/* Set black background color, white text and some padding */
+footer {
+      background-color: #7D46C5;
+      color: white;
+      padding: 5px;
+}
+
+/* Set black background color, white text and some padding */
+header {
+      background-color: #7D46C5;
+      color: white;
+      padding: 5px;
+}
+header p {
+    font-family:"Berlin San FB";
+    font-size: 18px;
+    font-weight:bold;
+    text-shadow: 2px 2px #000; 
+}
+/* Set background color and 100% height */
+.sidenav {
+      height: auto;
+      border-right-color: #7D46C5; 
+      border-right-style:solid;
+      border-right-width: 1px;      
+      
+}
+
+.sidenav li {
+    display: block;
+    margin-left: -5px;
+    margin-bottom: 5px;
+    
+}
+
+.sidenav li a:active {
+   background-color: #7D46C5;
+
+}
+
+.sidenav li a:hover {
+   background-color: #7D46C5;
+   color: #fff;
+   border-left:#ebcbe0 solid 3px; 
+
+}
+
+.sidenav li .badge {
+    float: right;
+}
+
