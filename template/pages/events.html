@@ -15,11 +15,11 @@
 
 <body>
     <header class="container-fluid">
-        <p>Owanbe Event Manager</p>
+        <p> Owanbe Event Manager </p>
     </header>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3 sidenav">
+            <div class="col-md-2 sidenav">
                 <div class="vertical-nav">                
                     <button class="btn btn-primary hidden-md-up" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                         <span class="">Menu</span>
@@ -45,54 +45,57 @@
 
                 </div>
             </div>
-            <div class="col-md-9 content">
+            <div class="col-md-10 content">
                 <div class="row">
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addEvent">
-                                Add Event
-                        </button>
+                        <a href="addEvent.html" class="btn btn-primary"> Add Event </a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <table class="table table-bordered table-hover">
-                                    <thead class="thead-default">
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Event Name</th>
-                                            <th>Event Type</th>
-                                            <th>Venue</th>
-                                            <th>Event Date</th>
-                                            <th>&nbsp;</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>CEO Business Class</td>
-                                            <td>Lecture</td>
-                                            <td>Planet One</td>
-                                            <td>November 30th 2017</td>
-                                            <td>
-                                            <a href="viewEventDetails.html"><i class="fa fa-eye"></i></a>
-                                            <a href="editEvent.html"><i class="fa fa-edit"></i></a> 
-                                            <a href="delete.html"><i class="fa fa-trash-o"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>GDC MeetUp</td>
-                                            <td>Meeting</td>
-                                            <td>Forever Event</td>
-                                            <td>November 5th 2017</td>
-                                            <td>
-                                            <a href="viewEventDetails.html"><i class="fa fa-eye"></i></a>
-                                            <a href="editEvent.html"><i class="fa fa-edit"></i></a> 
-                                            <a href="delete.html"><i class="fa fa-trash-o"></i></a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                        </table>
+                         <div class="card">
+                            <h3 class="card-header">Past Events</h3>
+                            <div class="card-block">
+                                <table class="table table-bordered table-hover">
+                                            <thead class="thead-default">
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Event Name</th>
+                                                    <th>Event Type</th>
+                                                    <th>Venue</th>
+                                                    <th>Event Date</th>
+                                                    <th>&nbsp;</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>CEO Business Class</td>
+                                                    <td>Lecture</td>
+                                                    <td>Planet One</td>
+                                                    <td>November 30th 2017</td>
+                                                    <td>
+                                                    <a href="viewEventDetails.html"><i class="fa fa-eye"></i></a>
+                                                    <a href="editEvent.html"><i class="fa fa-edit"></i></a> 
+                                                    <a href="delete.html"><i class="fa fa-trash-o"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>GDC MeetUp</td>
+                                                    <td>Meeting</td>
+                                                    <td>Forever Event</td>
+                                                    <td>November 5th 2017</td>
+                                                    <td>
+                                                    <a href="viewEventDetails.html"><i class="fa fa-eye"></i></a>
+                                                    <a href="editEvent.html"><i class="fa fa-edit"></i></a> 
+                                                    <a href="delete.html"><i class="fa fa-trash-o"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                </table>
+                            </div>
+                         </div>
                     
                     </div>
                 </div>
@@ -115,79 +118,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="pages/events.html">
-                        <div class="form-group row">
-                            <label for="title" class="col-2 col-form-label">Title</label>
-                            <div class="col-10">
-                                <input type="text" class="form-control"  placeholder="Enter Title">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="description" class="col-2 col-form-label">Description</label>
-                            <div class="col-10">
-                                <textarea class="form-control"  rows="3"> </textarea>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Event" class="col-2 col-form-label">Event Type</label>
-                            <div class="col-10">
-                                <select multiple class="form-control">
-                                    <option>Weddings</option>
-                                    <option>Lectures</option>
-                                    <option>Entertainment</option>
-                                    <option>Meeting</option>
-                                    <option>Religious</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="location" class="col-2 col-form-label">Venue</label>
-                            <div class="col-10">
-                                <select multiple class="form-control">
-                                    <option>Event Palace</option>
-                                    <option>Land Mark Event Center</option>
-                                    <option>Forever Event</option>
-                                    <option>Royal Gold Event Center</option>
-                                    <option>Ruby Event Center</option>
-                                    <option>Planet One Event Center</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="address" class="col-2 col-form-label">Address</label>
-                            <div class="col-10">
-                                <input type="text" class="form-control"  placeholder="Enter Address">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Phone" class="col-2 col-form-label">Contact Phone</label>
-                            <div class="col-10">
-                                <input type="text" class="form-control"  placeholder="Enter Phone">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="email" class="col-2 col-form-label">Contact Email</label>
-                            <div class="col-10">
-                                <input type="email" class="form-control"  placeholder="Enter Email">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="date" class="col-2 col-form-label">Date</label>
-                            <div class="col-10">
-                                <input class="form-control" type="date">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="date" class="col-2 col-form-label">Time</label>
-                            <div class="col-10">
-                                <input class="form-control" type="time">
-                            </div>
-                        </div>
-                        <div class="col-md-2 offset-md-8">
-                            <button type="submit" class="btn btn-success">Submit</button>
-                        </div>
-                    </form>
-
+                    
                 </div>
                 
             </div>
