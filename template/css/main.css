@@ -35,7 +35,7 @@ header p {
     font-size: 18px;
     font-weight:bold;
     text-shadow: 2px 2px #000; 
-}
+}   
 /* Set background color and 100% height */
 .sidenav {
       height: auto;
@@ -49,6 +49,7 @@ header p {
     display: block;
     margin-left: -5px;
     margin-bottom: 5px;
+    color:#7D46C5; 
     
 }
 
@@ -68,3 +69,14 @@ header p {
     float: right;
 }
 
+/* Style content */
+.content {
+    padding-top: 20px;
+}
+.content p {
+    font-family:"Monotype";
+    font-size: 22px;
+    font-weight:bold;
+    text-align: center;
+    
+}
