@@ -38,7 +38,7 @@ header p {
 }   
 /* Set background color and 100% height */
 .sidenav {
-      height: auto;
+      height: 100% auto;
       border-right-color: #7D46C5; 
       border-right-style:solid;
       border-right-width: 1px;      

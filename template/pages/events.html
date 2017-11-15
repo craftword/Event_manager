@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Owanbe Event Manager</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+     <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="icon" type="image/png" href="../img/icon.jpg"/>   
+  </head>
+
+<body>
+    <header class="container-fluid">
+        <p>Owanbe Event Manager</p>
+    </header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-lg-3 sidenav">
+            <div class="vertical-nav">                
+                <button class="btn btn-primary hidden-md-up" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="">Menu</span>
+                </button>
+                
+
+                <div class="collapse" id="collapseExample">
+                    <ul class="nav flex-column" id="exCollapsingNavbar3">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="events.html"><i class="fa fa-plus" aria-hidden="true"></i> Events </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="centers.html"><i class="fa fa-cutlery" aria-hidden="true"></i> Centers </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../login/index.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-md-9 col-lg-9 content">
+            <div class="row">
+                <button type="button" class="btn btn-warming" data-toggle="modal" data-target="#addEvent">
+                        Add Event
+                </button>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            List of Past Events
+                        </div>
+                        <div class="card-block">
+                            <table class="table table-bordered table-hover table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Event Name</th>
+                                        <th>Event Type</th>
+                                        <th>Venue</th>
+                                        <th>Event Date</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>CEO Business Class</td>
+                                        <td>Lecture</td>
+                                        <td>Planet One</td>
+                                        <td>November 30th 2017</td>
+                                        <td>
+                                        <a href="viewEventDetails.html" class="btn btn-xs btn-success">view</a>
+                                        <a href="editEvent.html" class="btn btn-xs btn-primary">Edit</a> 
+                                        <a href="delete.html" class="btn btn-xs btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+</div>
+
+<footer class="container-fluid fixed-bottom">
+  <p align="center">&copy; Andela 2017</p>
+</footer>
+
+<!-- Add Event Modal -->
+    <div class="modal fade" id="addEvent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ADD NEW EVENT</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="pages/events.html">
+                        <div class="form-group row">
+                            <label for="title" class="col-2 col-form-label">Title</label>
+                            <div class="col-10">
+                                <input type="text" class="form-control"  placeholder="Enter Title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="description" class="col-2 col-form-label">Description</label>
+                            <div class="col-10">
+                                <textarea class="form-control"  rows="3"> </textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="Event" class="col-2 col-form-label">Event Type</label>
+                            <div class="col-10">
+                                <select multiple class="form-control">
+                                    <option>Weddings</option>
+                                    <option>Lectures</option>
+                                    <option>Entertainment</option>
+                                    <option>Meeting</option>
+                                    <option>Religious</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="location" class="col-2 col-form-label">Venue</label>
+                            <div class="col-10">
+                                <select multiple class="form-control">
+                                    <option>Event Palace</option>
+                                    <option>Land Mark Event Center</option>
+                                    <option>Forever Event</option>
+                                    <option>Royal Gold Event Center</option>
+                                    <option>Ruby Event Center</option>
+                                    <option>Planet One Event Center</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="address" class="col-2 col-form-label">Address</label>
+                            <div class="col-10">
+                                <input type="text" class="form-control"  placeholder="Enter Address">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="Phone" class="col-2 col-form-label">Contact Phone</label>
+                            <div class="col-10">
+                                <input type="text" class="form-control"  placeholder="Enter Phone">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-2 col-form-label">Contact Email</label>
+                            <div class="col-10">
+                                <input type="email" class="form-control"  placeholder="Enter Email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="date" class="col-2 col-form-label">Date</label>
+                            <div class="col-10">
+                                <input class="form-control" type="date">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="date" class="col-2 col-form-label">Time</label>
+                            <div class="col-10">
+                                <input class="form-control" type="time">
+                            </div>
+                        </div>
+                        <div class="col-md-2 offset-md-8">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </form>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+ <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+</body>
+</html>
