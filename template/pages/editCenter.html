@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Owanbe Event Manager</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+     <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="icon" type="image/png" href="../img/icon.jpg"/>   
+  </head>
+
+<body>
+    <header class="container-fluid">
+        <p>Owanbe Event Manager</p>
+    </header>
+<div class="container-fluid">
+    <div class="row">
+        <div class=" col-md-2 sidenav">
+            <div class="vertical-nav">                
+                <button class="btn btn-primary hidden-md-up" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="">Menu</span>
+                </button>
+                
+                <div class="collapse" id="collapseExample">
+                    <ul class="nav flex-column" id="exCollapsingNavbar3">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="events.html"><i class="fa fa-ticket" aria-hidden="true"></i> Events </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="centers.html"><i class="fa fa-map-marker" aria-hidden="true"></i> Centers </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../login/index.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <div class=" col-md-10 content">            
+            <div class="card">
+                <h4 class="card-header">Edit Center Form</h4>
+                <div class="card-block">
+                   <form action="pages/centers.html">
+                        <div class="form-group row">
+                            <label for="title" class="col-1 col-form-label">Name</label>
+                            <div class="col-5">
+                                <input type="text" class="form-control"  value="Planet One">
+                            </div>
+                            <label for="title" class="col-1 col-form-label">Price</label>
+                            <div class="col-5">
+                                <input type="text" class="form-control"  value="200,000">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="description" class="col-2 col-form-label">Description</label>
+                            <div class="col-10">
+                                <textarea class="form-control"  rows="3">uhdwhuwhduwhduwhduwhudhwudhw </textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="Event" class="col-1 col-form-label">Venue Type</label>
+                            <div class="col-5">
+                                <select multiple class="form-control">
+                                    <option>Theater</option>
+                                    <option>Multi-purpose Hall</option>
+                                    <option>Banquet Hall</option>
+                                    <option>Conference Hall</option>
+                                </select>
+                            </div>
+                            <label for="Event" class="col-1 col-form-label">Upload Image</label>
+                             <div class="col-5">
+                                 <label class="custom-file">
+                                    <input type="file" id="file" class="custom-file-input" value="img/centers/planetOne.jpg">
+                                    <span class="custom-file-control"></span>
+                                </label>
+                             </div>
+                        </div>                        
+                        <div class="form-group row">
+                            <label for="address" class="col-2 col-form-label">Address</label>
+                            <div class="col-10">
+                                <input type="text" class="form-control"  value="123 Awolowo st">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="Phone" class="col-1 col-form-label">Location</label>
+                            <div class="col-5">
+                                <input type="text" class="form-control" value="MaryLand Lagos">
+                            </div>
+                            <label for="text" class="col-1 col-form-label">Capacity</label>
+                            <div class="col-5">
+                                <input type="text" class="form-control"  value="700">
+                            </div>
+                        </div>                        
+                        <div class="form-group row">
+                            <label for="date" class="col-2 col-form-label">Facilities</label>
+                            <div class="col-10">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        Table
+                                    </label>
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        Chair
+                                    </label>
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        Rest Room
+                                    </label>
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        Power
+                                    </label>
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        Parking Space
+                                    </label>
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        Air Conditioning
+                                    </label>
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        Television
+                                    </label>
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        Projection
+                                    </label>
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        Stage
+                                    </label>
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        Lighting
+                                    </label>
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        Sound System
+                                    </label>
+
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                        <label for="date" class="col-2 col-form-label">Venue Policies</label>
+                            <div class="col-10">
+                                <textarea class="form-control"  rows="3"> hahahahahhahahahaah</textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-2 offset-md-9">
+                            <button type="submit" class="btn btn-success">Update</button>
+                        </div>
+                    </form>
+ 
+                            
+                        
+                    
+                </div>
+            </div>
+        </div>    
+          
+    </div>
+</div>
+
+<footer class="container-fluid fixed-bottom">
+  <p align="center">&copy; Andela 2017</p>
+</footer>
+
+
+ <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+</body>
+</html>

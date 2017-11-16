@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Owanbe Event Manager</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+     <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="icon" type="image/png" href="../img/icon.jpg"/>   
+  </head>
+
+<body>
+    <header class="container-fluid">
+        <p> Owanbe Event Manager </p>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 sidenav">
+                <div class="vertical-nav">                
+                    <button class="btn btn-primary hidden-md-up" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        <span class="">Menu</span>
+                    </button>
+                    
+
+                    <div class="collapse" id="collapseExample">
+                        <ul class="nav flex-column" id="exCollapsingNavbar3">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="events.html"><i class="fa fa-ticket" aria-hidden="true"></i> Events </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="centers.html"><i class="fa fa-map-marker" aria-hidden="true"></i> Centers </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../login/index.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-10 content">
+                <div class="row">
+                    <div class="col-md-2">
+                        <a href="addCenter.html" class="btn btn-primary"> Add New Center </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                         <div class="card">
+                            <h3 class="card-header">List of Centers</h3>
+                            <div class="card-block">
+                                <table class="table table-bordered table-hover">
+                                            <thead class="thead-default">
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Name</th>
+                                                    <th>Venue Type</th>
+                                                    <th>Location</th>
+                                                    <th>Capacity</th>
+                                                    <th>&nbsp;</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Planet One</td>
+                                                    <td>Multi Purpose Hall</td>
+                                                    <td>MaryLand Lagos</td>
+                                                    <td>700</td>
+                                                    <td>
+                                                    <a href="viewCenter.html" ><i class="fa fa-eye"></i></a>
+                                                    <a href="editCenter.html"><i class="fa fa-edit"></i></a> 
+                                                    <a href="#" id="delete"><i class="fa fa-trash-o"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Ruby Event Center</td>
+                                                    <td>Banquet Hall</td>
+                                                    <td>Yaba Lagos</td>
+                                                    <td>1000</td>
+                                                    <td>
+                                                    <a href="viewCenter.html" ><i class="fa fa-eye"></i></a>
+                                                    <a href="editCenter.html"><i class="fa fa-edit"></i></a> 
+                                                    <a href="#" id="delete"><i class="fa fa-trash-o"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Royal Gold Event Center</td>
+                                                    <td>Theater</td>
+                                                    <td>V.I Lagos</td>
+                                                 a   <td>3000</td>
+                                                    <td>
+                                                    <a href="viewCenter.html" ><i class="fa fa-eye"></i></a>
+                                                    <a href="editCenter.html"><i class="fa fa-edit"></i></a> 
+                                                    <a href="#" id="delete"><i class="fa fa-trash-o"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                </table>
+                            </div>
+                         </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid fixed-bottom">
+    <p align="center">&copy; Andela 2017</p>
+    </footer>
+
+<!-- Add Event Modal -->
+    <div class="modal fade" id="addEvent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">EVENT DETAILS</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card card-outline-primary mb-3 text-center">
+                        <div class="card-block">
+                                <div class="row">
+                                <p><img src="../img/centers/Landmark.jpg" class="img-thumbnail rounded float-left" alt="Event Palace"></p>
+                                </div>
+                                <div class="row">
+                                    <label for="title" class="col-2"><strong>Title</strong></label>
+                                    <div class="col-10">
+                                        CEO Business Class
+                                    </div>                                    
+                                </div>
+
+                                <div class="row">
+                                    <label for="title" class="col-2"><strong>Event Type</strong></label>
+                                    <div class="col-10">
+                                         Lecture
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label for="title" class="col-2"><strong>Description</strong></label>
+                                    <div class="col-10">
+                                        Management course for MDs and CEOs
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label for="title" class="col-2"><strong>Venue</strong></label>
+                                    <div class="col-10">
+                                        Planet One
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label for="title" class="col-2"><strong>Address</strong></label>
+                                    <div class="col-10">
+                                        123, Awolowo st Maryland Lagos
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label for="title" class="col-2"><strong>Date</strong></label>
+                                    <div class="col-10">2017-11-30                                        
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label for="title" class="col-2"><strong>Time</strong></label>
+                                    <div class="col-10"> 13:45:00                                        
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label for="title" class="col-2"><strong>Contact Phone</strong></label>
+                                    <div class="col-10">
+                                        08027313450
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label for="title" class="col-2"><strong>Contact Email</strong></label>
+                                    <div class="col-10">
+                                        ceoclass@gmail.com
+                                    </div>
+                                </div>
+                      
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+ <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script>
+    $("#delete").on("click", ()=> {
+        confirm("Are sure you want to delete this recipe");
+    });
+</script>
+
+</body>
+</html>
