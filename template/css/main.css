@@ -36,15 +36,7 @@ header p {
     text-shadow: 2px 2px #000; 
 } 
 /* wrapper */
-.container-fluid { 
-    overflow: hidden;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex; 
 
-} 
 
 /* Set background color and height */
 .sidenav {
