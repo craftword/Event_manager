@@ -21,15 +21,17 @@ body {
     font-family:"Berlin San FB";
     font-size: 36px;
     font-weight:bold;
-    color: #ff00ff;
-    text-shadow: 2px 2px #ff0000; 
+    color: #d746c0;    
+    background-color: #fff;
+    margin-top: 10px;
     
 }
 .moto {
     font-family:"Monotype Corsiva";
     font-size: 30px;
     text-shadow: 2px 2px #000;
-    color: #fff;  
+    color: #fff; 
+    font-stretch: 10px; 
 }
 .sign_button {
     margin-top: 50px;
