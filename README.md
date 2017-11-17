@@ -1,9 +1,15 @@
 ## Owanbe Event Management App
 
-[More-Recipes](https://github.com/craftword/https://github.com/craftword/Event_manager)
+[Owanbe Event Management](https://github.com/craftword/https://github.com/craftword/Event_manager)
 
 ## Introduction
 Owanbe Event Management App is application that helps to manage events and centers to hold these events. It is very usefull in this part of world especially in western part of Nigeria where we have a lot of events on a daily bases. That is why the app was call 'Owanbe' meaning  party, event etc
+
+## Getting Started
+Clone the repo from Github to your Desktop, run it on your browser or node js server
+
+## Prerequisites
+You need node js install on your Desktop
 
 ## Features
 
@@ -21,7 +27,8 @@ Owanbe Event Management App is application that helps to manage events and cente
 - Banquet
 - Conference Hall
 
-
+## Author
+- Abimbola Olaitan
 
 
 ## Contribute
