@@ -8,6 +8,16 @@
 a {
     color:#7D46C5;
 }
+
+/* table borderless */
+.borderless td, .borderless th {
+    border: none;    
+    
+}
+.card {
+    padding-left: 10px;
+}
+
  /************ User Administration Section ******************/
  /* Creates a vertical nav starting at 768px (sm) */
 @media (min-width: 768px) {
