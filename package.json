@@ -1,0 +1,27 @@
+{
+  "name": "event_manager",
+  "version": "1.0.0",
+  "description": "This app is use to manage events and centers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craftword/Event_manager.git"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "Abimbola Olaitan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/craftword/Event_manager/issues"
+  },
+  "homepage": "https://github.com/craftword/Event_manager#readme",
+  "dependencies": {
+    "pg": "^7.4.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.22.8"
+  }
+}
