@@ -3,14 +3,18 @@
 */
 
 /************ Login & Registration Section ******************/
-html,body{
+html{
     height:100%;
 }
 
 body {
     background-image: url("../img/background.jpg");
     background-repeat: no-repeat;
-    background-size: 100% auto;    
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;    
        
 }
 
@@ -24,6 +28,7 @@ body {
     color: #d746c0;    
     background-color: #fff;
     margin-top: 10px;
+    text-align: center;
     
 }
 .moto {
@@ -33,6 +38,23 @@ body {
     color: #fff; 
     font-stretch: 10px; 
 }
+
 .sign_button {
     margin-top: 50px;
 }
+/*for small device   */
+@media (max-width: 768px) {
+    .caption {
+        font-size: 18px;
+    }
+    .moto {
+        font-size: 16px;
+    }
+    .btn {
+        padding: 4px 6px;
+        font-size: 12px;
+        line-height: 2;
+        
+    }   
+}
+
