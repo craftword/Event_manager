@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import Sequelize from 'sequelize';
-import config from '${__dirname}/../config/config.json';
+import config from '../config/config.json';
 
 const basename = path.basename(module.filename);
 const env = process.env.NODE_ENV || 'development';
@@ -12,8 +12,11 @@ const db = {};
 // This check the Environment in use whether local and online
 
 let sequelize;
+
+
 if (data.url) {
-    sequelize = new Sequelize(process.env.DATABASE_URL);
+    sequelize = new Sequelize(data.url);
+   
 } else {
     sequelize = new Sequelize(
         data.database, data.username, data.password, data

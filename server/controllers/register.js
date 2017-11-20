@@ -17,7 +17,7 @@ const create = (req, res) => {
         .then(users => res.status(201).json({
             "fullname":users.fullname,
             "email":users.email,
-            "Id":users.id,
+            "id":users.id,
             "username":users.username
         }))
         .catch(error => res.status(400).send(error)); 

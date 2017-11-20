@@ -1,14 +1,10 @@
 {
   "development": {
-    "url": "DATABASE_URL",
+    "url": "postgres://cuefukhh:7JQxN2b0guKlw29pzx5SfZ90FqbJvzDP@nutty-custard-apple.db.elephantsql.com:5432/cuefukhh",
     "dialect": "postgres"
   },
   "test": {
-    "username": "TEST_USERNAME",
-    "password":"TEST_PASSWORD",
-    "database": "TEST_USERNAME",
-    "use_env_variable": "TEST_URL",
-    "host": "TEST_HOST",
+    "url": "postgres://rwnuznwn:0AP7qJ_KeTkRCoU21xAlmeuUtrqe_bzU@baasu.db.elephantsql.com:5432/rwnuznwn",
     "dialect": "postgres"
   },
   "production": {

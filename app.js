@@ -16,6 +16,9 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// Setup a default catch-all route that sends back a welcome message in JSON format.
+import appApi from "./server/routes";
+appApi(app);
 
 app.get('*', (req, res) => res.status(200).send({
     message: 'Welcome to the beginning of nothingness.',

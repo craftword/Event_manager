@@ -1,7 +1,7 @@
 "use strict";
 
 const Roles = (sequelize, DataTypes) => {
-    const Recipes = sequelize.define("Roles", {
+    const Roles = sequelize.define("Roles", {
         Name: {
             type: DataTypes.STRING,
             allowNull: false,            

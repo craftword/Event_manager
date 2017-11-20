@@ -42,4 +42,5 @@ const Users = (sequelize, DataTypes) => {
     return Users;
 };
 
+
 export default Users;
