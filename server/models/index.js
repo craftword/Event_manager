@@ -13,8 +13,7 @@ const db = {};
 
 let sequelize;
 if (data.url) {
-  
-  sequelize = new Sequelize(process.env.DATABASE_URL);
+    sequelize = new Sequelize(process.env.DATABASE_URL);
 } else {
     sequelize = new Sequelize(
         data.database, data.username, data.password, data
