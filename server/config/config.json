@@ -1,0 +1,17 @@
+{
+  "development": {
+    "url": "DATABASE_URL",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "TEST_USERNAME",
+    "password":"TEST_PASSWORD",
+    "database": "TEST_USERNAME",
+    "use_env_variable": "TEST_URL",
+    "host": "TEST_HOST",
+    "dialect": "postgres"
+  },
+  "production": {
+    "dialect": "mysql"
+  }
+}
