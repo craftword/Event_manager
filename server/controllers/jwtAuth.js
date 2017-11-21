@@ -1,11 +1,10 @@
-//const UserModel = require('../models/users');
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 
 // load environment
 dotenv.load();
 //Authentication secret
-const secret_token = process.env.SECRET;
+const secret = process.env.SECRET;
 
 const auth = (req, res, next) => {
     // check header or url parameters or post parameters for token
@@ -41,14 +40,5 @@ const auth = (req, res, next) => {
 
 };
 
-
-const checkAdmin = (request, response, next) => {
-    if (request.decoded.role != 'admin') {
-        response.json({message: 'Permission denied.' });
-    }
-    else {
-        next();
-    }
-};
 
 export default auth;
