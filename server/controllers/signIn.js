@@ -20,7 +20,7 @@ const signIn = (req, res) => {
         })
         .then(user => {
             if(user === null) {
-                res.json({ success: false, message: "Authentication failed. User not found." });
+                res.status(403).json({ success: false, message: "Authentication failed. User not found." });
             }
             //to compare password that user supplies in the future
             let hash = user.password;
