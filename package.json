@@ -1,0 +1,56 @@
+{
+  "name": "event_manager",
+  "version": "1.0.0",
+  "description": "This app is use to manage events and centers",
+  "main": "app.js",
+  "scripts": {
+    "mocha": "mocha --compilers js:babel-register",
+    "test": "mocha --compilers js:babel-register --recursive ./test/ --timeout 10000",
+    "babel-node": "babel-node --presets=latest",
+    "start": "nodemon --exec npm run babel-node -- ./app",
+    "build": "babel src -d dist",
+    "cover": "istanbul cover _mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craftword/Event_manager.git"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "Abimbola Olaitan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/craftword/Event_manager/issues"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "homepage": "https://github.com/craftword/Event_manager#readme",
+  "devDependencies": {
+    "babel-preset-latest": "^6.24.1",
+    "chai": "^4.1.0",
+    "eslint": "^4.11.0",
+    "eslint-plugin-react": "^7.5.1",
+    "istanbul": "^0.4.5",
+    "nodemon": "^1.11.0",
+    "supertest": "^3.0.0"
+  },
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.2",
+    "chai-http": "^3.0.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "jsonwebtoken": "^7.4.1",
+    "morgan": "^1.8.2",
+    "nodemon": "^1.11.0",
+    "pg": "^6.4.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.7.5"
+  }
+}
