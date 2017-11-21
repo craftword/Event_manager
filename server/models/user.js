@@ -25,17 +25,11 @@ const Users = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
+        role: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
               
-    }, 
-    {
-        classMethods: {
-            associate: (models) => {
-                Users.hasOne(models.Roles, {
-                    foreignKey: "userId",
-                    as: "roles",
-                });
-            },
-        }
     });
     
 
