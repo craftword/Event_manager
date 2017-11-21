@@ -29,14 +29,19 @@ const signIn = (req, res) => {
                     // if user is found and password is right
                     // create a token
                     // expire in one hour
+                    const payload = {
+                        role: user.role,
+                        exp: Math.floor(Date.now() / 1000) + (60 * 60),
+                        data:user.username
+                      };
                        
-                    const token = jwt.sign({exp: Math.floor(Date.now() / 1000) + (60 * 60), data:user.username}, secret_token);
+                    const token = jwt.sign(payload, secret_token);
                     //console.log(token);
                     // return the information including token as JSON
                     res.status(200).json({
                         success: true,
-                        userId: user.id,
                         message: "Welcome Home!",
+                        role:user.role,
                         token: token
                     });
 

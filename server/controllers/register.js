@@ -11,14 +11,16 @@ const create = (req, res) => {
             username: req.body.username,
             password: password,
             fullname: req.body.fullname,
-            phone: req.body.phone
+            phone: req.body.phone,
+            role:req.body.role
             
         })
         .then(users => res.status(201).json({
             "fullname":users.fullname,
             "email":users.email,
             "id":users.id,
-            "username":users.username
+            "username":users.username,
+            "role":users.role
         }))
         .catch(error => res.status(400).send(error)); 
 };

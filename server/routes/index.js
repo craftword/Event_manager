@@ -1,5 +1,7 @@
 import create from "../controllers/register";
 import signIn from "../controllers/signIn";
+import auth from "../controllers/jwtAuth";
+import checkAdmin from "../controllers/checkAdmin";
 
 
 const appApi = (app) => {

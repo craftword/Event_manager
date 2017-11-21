@@ -9,14 +9,15 @@ const server = request.agent("http://localhost:9000");
 
 //Our parent block
 describe('API for SignIn and SignUp', () => {
-   /* beforeEach((done) => { //Before each test we empty the database
-        Users.remove({}, (err) => { 
-           done();         
-        });     
-    });
- */
+    Users.destroy({
+        cascade: true,
+        truncate: true,
+        restartIdentity: true
+    });  
+    
+ 
     describe('Test for Models', ()=> {
-       /* it('respond with json after signup', (done)=> {
+        it('respond with json after signup', (done)=> {
             const prob = {
                 username:"dummy777", 
                 password:"dummy100",
@@ -33,10 +34,10 @@ describe('API for SignIn and SignUp', () => {
                     expect(data.username).to.equal("dummy777");
                     expect(data.fullname).to.equal("dummy Dum");
                     expect(data.email).to.equal("mummy@gmail.com");
-                    //expect(data.phone).to.equal("08967689609");
+                   // expect(data.phone).to.equal("08967689609");
                     done();
                 });
-        });*/
+        });
         
         it('respond with a 404 error when signUp with a register username', (done)=> {
             const prob = {
