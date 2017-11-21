@@ -1,13 +1,30 @@
 'use strict';
-module.exports = (sequelize, DataTypes) => {
-  var Facilities = sequelize.define('Facilities', {
-    name: DataTypes.STRING
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
-    }
-  });
-  return Facilities;
+const Facilities = (sequelize, DataTypes) => {
+    const Facilities = sequelize.define('Facilities', {
+      centerId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        check: {
+          type: DataTypes.STRING,
+          allowNull: false,
+        },
+                 
+    }, 
+    {
+        associate: (models) => {
+            Facilities.belongsTo(models.Centers, {
+                foreignKey: 'centerId',
+                onDelete: 'CASCADE',
+            });
+        },
+    });
+    
+    return Facilities;
 };
+
+export default Facilities;

@@ -9,9 +9,24 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
+        allowNull: false,
         type: Sequelize.STRING
       },
-      createdAt: {
+      check: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      
+      centerId: {
+        type: Sequelize.INTEGER,
+        onDelete: "CASCADE",
+        references: {
+            model: "Centers",
+            key: "id",
+            as: "centerId",
+        },
+    },
+     createdAt: {
         allowNull: false,
         type: Sequelize.DATE
       },
