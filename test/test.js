@@ -9,12 +9,12 @@ const server = request.agent("http://localhost:9000");
 
 //Our parent block
 describe('API for SignIn and SignUp', () => {
-    Users.destroy({
+    /*Users.destroy({
         cascade: true,
         truncate: true,
         restartIdentity: true
     });  
-    
+    */
  
     describe('Test for Models', ()=> {
         it('respond with json after signup', (done)=> {

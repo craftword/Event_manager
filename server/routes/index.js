@@ -14,6 +14,7 @@ const appApi = (app) => {
     app.post("/api/v1/user/signup", create);
     app.post("/api/v1/user/signin", signIn);
     app.post("/api/v1/events/", auth, event.create);
+    app.put("/api/v1/events/:eventId", auth, event.update);
     app.post("/api/v1/centers/", auth, checkAdmin,center.create);
    
 };

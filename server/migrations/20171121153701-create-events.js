@@ -38,6 +38,7 @@ module.exports = {
       },
       date: {
         allowNull: false,
+        unique: true,
         type: Sequelize.STRING
       },
       time: {
@@ -46,7 +47,6 @@ module.exports = {
       },
       centerId: {
         type: Sequelize.INTEGER,
-        onDelete: "CASCADE",
         references: {
             model: "Centers",
             key: "id",

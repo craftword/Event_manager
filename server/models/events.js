@@ -39,6 +39,7 @@ const Events = (sequelize, DataTypes) => {
         },
         date: {
           type: DataTypes.STRING,
+          unique: true,
           allowNull: false,
         },
         time: {
@@ -51,7 +52,6 @@ const Events = (sequelize, DataTypes) => {
         associate: (models) => {
             Events.belongsTo(models.Centers, {
                 foreignKey: 'centerId',
-                onDelete: 'CASCADE',
             });
             Events.belongsTo(models.Users, {
               foreignKey: 'userId',
