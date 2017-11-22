@@ -2,6 +2,7 @@ import create from "../controllers/register";
 import signIn from "../controllers/signIn";
 import auth from "../controllers/jwtAuth";
 import checkAdmin from "../controllers/checkAdmin";
+import event from "../controllers/events";
 
 
 const appApi = (app) => {
@@ -11,6 +12,7 @@ const appApi = (app) => {
     // login and signIn
     app.post("/api/v1/user/signup", create);
     app.post("/api/v1/user/signin", signIn);
+    app.post("/api/v1/events/", event.create);
     
    
 };
