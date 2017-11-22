@@ -28,7 +28,7 @@ const event = {
                         userId: req.body.userId,
                         centerId:req.body.centerId,
                     })
-                    .then(result => res.status(201).json({event: "Created successful..." }))
+                    .then(result => res.status(201).send(result).json({event: "Created successful" }))
                     .catch(error => res.status(400).send(error));
                 }       
             
@@ -76,16 +76,29 @@ const event = {
                 userId: req.body.userId,
                 centerId:req.body.centerId,
              })                            
-            .then(result => res.status(201).json({event: "Updated successful..." }))
+            .then(result => res.status(201).send(result).json({event: "Updated successful" }))
             .catch(error => res.status(400).send(error)); 
           })
           .catch(error => res.status(400).send(error));
 
     },
     // delete a Event
-    destory(req, res) {
-
-    },
+    destroy(req, res) {
+        return getEvent
+          .findById(req.params.eventId)
+          .then(event => {
+            if (!event) {
+              return res.status(400).send({
+                message: 'Event Not Found',
+              });
+            }
+            return event
+              .destroy()
+              .then(() => res.status(204).send({event: "Deleted successful" }))
+              .catch(error => res.status(400).send(error));
+          })
+          .catch(error => res.status(400).send(error));
+      },
 };
 
 export default event;
