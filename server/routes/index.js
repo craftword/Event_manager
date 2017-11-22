@@ -1,7 +1,6 @@
-import create from "../controllers/register";
-import signIn from "../controllers/signIn";
-import auth from "../controllers/jwtAuth";
-import checkAdmin from "../controllers/checkAdmin";
+import users from "../controllers/users";
+import auth from "../middlewares/jwtAuth";
+import checkAdmin from "../middlewares/checkAdmin";
 import event from "../controllers/events";
 import center from "../controllers/centers";
 
@@ -11,10 +10,16 @@ const appApi = (app) => {
         message: "Welcome to the Owanbe Event Manager App!",
     }));
     // login and signIn
-    app.post("/api/v1/user/signup", create);
-    app.post("/api/v1/user/signin", signIn);
+    app.post("/api/v1/user/signup", users.create);
+    app.post("/api/v1/user/signin", users.signIn);
+
+    // Events Endpoints
     app.post("/api/v1/events/", auth, event.create);
     app.put("/api/v1/events/:eventId", auth, event.update);
+    app.get("/api/v1/events/:eventId", auth, event.view);
+    
+
+    // Centers Endpoints
     app.post("/api/v1/centers/", auth, checkAdmin,center.create);
    
 };
