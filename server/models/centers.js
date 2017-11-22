@@ -34,7 +34,7 @@ const Centers = (sequelize, DataTypes) => {
           allowNull: false,
         },
         price: {
-          type: DataTypes.DATE,
+          type: DataTypes.INTEGER,
           allowNull: false,
         },
           

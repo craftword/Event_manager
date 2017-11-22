@@ -38,11 +38,11 @@ module.exports = {
       },
       date: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       },
       time: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       },
       centerId: {
         type: Sequelize.INTEGER,

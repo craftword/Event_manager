@@ -1,7 +1,7 @@
 'use strict';
 const Events = (sequelize, DataTypes) => {
     const Events = sequelize.define('Events', {
-      centerId: {
+       centerId: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
@@ -38,11 +38,11 @@ const Events = (sequelize, DataTypes) => {
           allowNull: false,
         },
         date: {
-          type: DataTypes.DATE,
+          type: DataTypes.STRING,
           allowNull: false,
         },
         time: {
-          type: DataTypes.DATE,
+          type: DataTypes.STRING,
           allowNull: false,
         },
           

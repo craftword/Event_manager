@@ -4,23 +4,25 @@ const getEvent = models.Events;
 const event = {
     create(req, res) {
         return getEvent
-            .findOne({ 
+            .findOrCreate({
                 where: { 
-                    date: req.body.date 
-                } 
+                    date:req.body.date
+                },
+                defaults: {
+                title: req.body.title,
+                description: req.body.description,
+                eventType: req.body.eventType,
+                venue: req.body.venue,
+                address: req.body.address,
+                contactPhone: req.body.contactPhone,
+                contactEmail: req.body.contactEmail,
+                time: req.body.time,
+                userId: req.body.userId,
+                centerId:req.body.centerId,
+                }                
             })
             .then(result => {
-                getEvent.create({
-                    title: req.body.title,
-                    description: req.body.description,
-                    eventType: eventType,
-                    venue: req.body.venue,
-                    contactPhone: req.body.contactPhone,
-                    contactEmail: req.body.contactEmail,
-                    date: req.body.date,
-                    time: req.body.time,
-                })
-                .then(users => res.status(201).json({event: "Created successful..." }))
+               res.status(201).json({event: "Created successful..." })
             })
             .catch(error => res.status(400).send(error));
     },
