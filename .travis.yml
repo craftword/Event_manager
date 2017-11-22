@@ -1,7 +1,19 @@
 language: node_js
 node_js:
 - "stable"
-
+services:
+  - postgresql
+branches:
+  only:
+    - development
+env:
+  - TEST_DBURL=postgres://rwnuznwn:0AP7qJ_KeTkRCoU21xAlmeuUtrqe_bzU@baasu.db.elephantsql.com:5432/rwnuznwn 
+before_script:
+  - psql -c 'create database rwnuznwn;' -U rwnuznwn
+script:
+  - npm test
+after_success:
+  - npm run coverage
 
 
 
