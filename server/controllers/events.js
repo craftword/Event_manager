@@ -36,8 +36,9 @@ const event = {
             .catch(error => res.status(400).send(error));
             
     },
-    // list all my event
-    show(req, res) {
+    
+    // view details of an event
+    view(req, res) {
         return getEvent
             .findAll({
                 where: {

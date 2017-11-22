@@ -13,8 +13,14 @@ const appApi = (app) => {
     // login and signIn
     app.post("/api/v1/user/signup", create);
     app.post("/api/v1/user/signin", signIn);
+
+    // Events Endpoints
     app.post("/api/v1/events/", auth, event.create);
     app.put("/api/v1/events/:eventId", auth, event.update);
+    app.get("/api/v1/events/:eventId", auth, event.view);
+    
+
+    // Centers Endpoints
     app.post("/api/v1/centers/", auth, checkAdmin,center.create);
    
 };
