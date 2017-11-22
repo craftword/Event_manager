@@ -17,7 +17,7 @@ const appApi = (app) => {
     app.post("/api/v1/events/", auth, event.create);
     app.put("/api/v1/events/:eventId", auth, event.update);
     app.get("/api/v1/events/:eventId", auth, event.view);
-    
+    app.delete("/api/v1/events/:eventId", auth, event.destroy);
 
     // Centers Endpoints
     app.post("/api/v1/centers/", auth, checkAdmin,center.create);
