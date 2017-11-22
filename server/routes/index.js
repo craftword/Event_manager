@@ -1,5 +1,4 @@
-import create from "../controllers/register";
-import signIn from "../controllers/signIn";
+import users from "../controllers/users";
 import auth from "../middlewares/jwtAuth";
 import checkAdmin from "../middlewares/checkAdmin";
 import event from "../controllers/events";
@@ -11,8 +10,8 @@ const appApi = (app) => {
         message: "Welcome to the Owanbe Event Manager App!",
     }));
     // login and signIn
-    app.post("/api/v1/user/signup", create);
-    app.post("/api/v1/user/signin", signIn);
+    app.post("/api/v1/user/signup", users.create);
+    app.post("/api/v1/user/signin", users.signIn);
 
     // Events Endpoints
     app.post("/api/v1/events/", auth, event.create);
