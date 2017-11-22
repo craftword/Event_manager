@@ -1,7 +1,7 @@
 import create from "../controllers/register";
 import signIn from "../controllers/signIn";
-import auth from "../controllers/jwtAuth";
-import checkAdmin from "../controllers/checkAdmin";
+import auth from "../middlewares/jwtAuth";
+import checkAdmin from "../middlewares/checkAdmin";
 import event from "../controllers/events";
 import center from "../controllers/centers";
 
