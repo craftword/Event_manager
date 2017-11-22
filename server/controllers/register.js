@@ -4,16 +4,14 @@ const createUser = models.Users;
 
 const create = (req, res) => {
     const password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(8), null);
-    return createUser
-       
+    return createUser       
         .create({
             email: req.body.email,
             username: req.body.username,
             password: password,
             fullname: req.body.fullname,
             phone: req.body.phone,
-            role:req.body.role
-            
+            role:req.body.role            
         })
         .then(users => res.status(201).json({
             "fullname":users.fullname,
