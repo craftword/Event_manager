@@ -26,7 +26,7 @@ const center = {
     list(req, res) {
         return getCenter
             .findAll()            
-            .then(result => res.status(200).send(re.sult))
+            .then(result => res.status(200).send(result))
             .catch(error => res.status(400).send(error));
     },
     view(req, res) {

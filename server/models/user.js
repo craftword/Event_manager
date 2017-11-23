@@ -36,7 +36,7 @@ const Users = (sequelize, DataTypes) => {
        Users.hasMany(models.Centers, { as: 'Center', foreignKey: 'userId' });
   };    
 
-    return Users;
+    return Users;Location
 };
 
 
