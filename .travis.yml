@@ -13,6 +13,7 @@ env:
   - TEST_DBURL=TEST_URL
 before_script:
   - psql -c 'create database Event-Manager-Test;' -U postgresql
+  
 script:
   - npm test
 after_success:
