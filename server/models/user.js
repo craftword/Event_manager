@@ -31,12 +31,10 @@ const Users = (sequelize, DataTypes) => {
         },
               
     });
-    Users.associate = ((models) => {
-        Users.hasMany(models.Events, {
-          foreignKey: 'userId',
-          // as: 'events',
-        });
-      });
+     // class methods
+     Users.associate = (models) => {
+       Users.hasMany(models.Centers, { as: 'Center', foreignKey: 'userId' });
+  };    
 
     return Users;
 };

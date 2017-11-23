@@ -40,19 +40,11 @@ const Centers = (sequelize, DataTypes) => {
           
     });
   // class methods
-  Centers.associate = ((models) => {
-    Centesr.hasMany(models.Events, {
-      foreignKey: 'centerId',
-      // as: 'events',
-    });
-  });
-   // class methods
-   Centers.associate = ((models) => {
-    Centers.hasMany(models.Facilities, {
-      foreignKey: 'centerId',
-      // as: 'facilities',
-    });
-  });
+  Centers.associate = (models) => {
+    Centers.belongsTo(models.Users, { foreignKey: 'userId' });
+    Centers.hasMany(models.Events, { as: 'Event', foreignKey: 'centerId' });
+  };
+    
     
     return Centers;
 };

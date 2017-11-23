@@ -48,19 +48,11 @@ const Events = (sequelize, DataTypes) => {
         },
           
     });
-
     Events.associate = (models) => {
-      Events.belongsTo(models.Users, {
-        foreignKey: 'userId',
-        onDelete: 'CASCADE',
-      });
+      Events.belongsTo(models.Users, { foreignKey: 'userId' });
+      Events.belongsTo(models.Centers, { foreignKey: 'centerId' });
     };
-    Events.associate = (models) => {
-      Events.belongsTo(models.Centers, {
-        foreignKey: 'centerId',
-        onDelete: 'CASCADE',
-      });
-    };
+    
     
     return Events;
 };
