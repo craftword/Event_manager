@@ -19,7 +19,7 @@ const center = {
                                
             })
             .then(result => {
-               res.status(201).send(result).json({Center: "Created successful" })
+               res.status(201).send(result)
             })
             .catch(error => res.status(400).send(error));
     },
