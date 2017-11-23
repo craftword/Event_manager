@@ -4,6 +4,10 @@ const Centers = (sequelize, DataTypes) => {
         name: {
             type: DataTypes.STRING,
             allowNull: false,
+            unique: {
+              args: true,
+              msg: 'Center name must be unique.'
+            },
         },
         description: {
             type: DataTypes.TEXT,

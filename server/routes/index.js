@@ -2,7 +2,7 @@ import users from "../controllers/users";
 import auth from "../middlewares/jwtAuth";
 import checkAdmin from "../middlewares/checkAdmin";
 import event from "../controllers/events";
-import center from "../controllers/centers";
+import centerController from "../controllers/centers";
 
 
 const appApi = (app) => {
@@ -20,10 +20,10 @@ const appApi = (app) => {
     app.delete("/api/v1/events/:eventId", auth, event.destroy);
 
     // Centers Endpoints
-    app.post("/api/v1/centers/", auth, checkAdmin,center.create);
-    app.put("/api/v1/centers/:centerId", auth, checkAdmin,center.update);
-    app.get("/api/v1/centers/:centerId", auth, center.view);
-    app.get("/api/v1/centers/", center.list);
+    app.post("/api/v1/centers/", auth, checkAdmin,centerController.create);
+    app.put("/api/v1/centers/:centerId", auth, checkAdmin,centerController.update);
+    app.get("/api/v1/centers/:centerId", auth, centerController.view);
+    app.get("/api/v1/centers/", centerController.list);
 };
 
 export default appApi;

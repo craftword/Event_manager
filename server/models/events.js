@@ -39,8 +39,11 @@ const Events = (sequelize, DataTypes) => {
         },
         date: {
           type: DataTypes.STRING,
-          unique: true,
           allowNull: false,
+          unique: {
+            args: true,
+            msg: 'Center is already been booked.'
+          },
         },
         time: {
           type: DataTypes.STRING,

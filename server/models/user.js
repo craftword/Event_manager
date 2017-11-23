@@ -5,11 +5,16 @@ const Users = (sequelize, DataTypes) => {
         username: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true,
+            unique: {
+                args: true,
+                msg: 'Username taken! Please enter a new username.'
+              },
+                         
         },
         password: {
             type: DataTypes.STRING,
             allowNull: false,
+            
         },
         fullname: {
             
