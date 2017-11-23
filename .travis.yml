@@ -1,15 +1,18 @@
 language: node_js
 node_js:
-- "stable"
+- 8.1.3
 services:
   - postgresql
 branches:
   only:
     - development
+cache:
+  directories:
+   - "node_modules"
 env:
-  - TEST_DBURL=postgres://rwnuznwn:0AP7qJ_KeTkRCoU21xAlmeuUtrqe_bzU@baasu.db.elephantsql.com:5432/rwnuznwn 
+  - TEST_DBURL=TEST_URL
 before_script:
-  - psql -c 'create database rwnuznwn;' -U rwnuznwn
+  - psql -c 'create database Event-Manager-Test;' -U postgresql
 script:
   - npm test
 after_success:

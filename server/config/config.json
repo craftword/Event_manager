@@ -1,13 +1,13 @@
 {
   "development": {
-    "url": "postgres://cuefukhh:7JQxN2b0guKlw29pzx5SfZ90FqbJvzDP@nutty-custard-apple.db.elephantsql.com:5432/cuefukhh",
+    "url": "DATABASE_URL",
     "dialect": "postgres"
   },
   "test": {
-    "url": "postgres://rwnuznwn:0AP7qJ_KeTkRCoU21xAlmeuUtrqe_bzU@baasu.db.elephantsql.com:5432/rwnuznwn",
+    "url": "TEST_URL",
     "dialect": "postgres"
   },
   "production": {
-    "dialect": "mysql"
+    "dialect": "postgres"
   }
 }

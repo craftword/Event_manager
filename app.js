@@ -5,7 +5,7 @@ import http from 'http';
 import dotenv from 'dotenv';
 
 // load environment
-dotenv.load();
+dotenv.config();
 // Set up the express app
 const app = express(); 
 
