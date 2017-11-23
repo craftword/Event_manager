@@ -18,16 +18,19 @@ const center = {
                                
             })
             .then(result => {
-               res.status(201).json({Center: "Created successful..." })
+               res.status(201).send(error).json({Center: "Created successful..." })
             })
             .catch(error => res.status(400).send(error));
     },
     list(req, res) {
         return getCenter
             .findAll()            
-            .then(result => res.status(200).send(result))
+            .then(result => res.status(200).send(re.sult))
             .catch(error => res.status(400).send(error));
     },
+    view (req, res) {
+        
+    }, 
     put(req, res) {
 
     },

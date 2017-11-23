@@ -30,19 +30,13 @@ const Users = (sequelize, DataTypes) => {
             allowNull: false,
         },
               
-    },
-    {
-        classMethods: {
-            associate: (models) => {
-                Users.hasMany(models.Events, {
-                    foreignKey: "userId",
-                    as: "events",
-                });
-            },
-        }
-    }
-);
-    
+    });
+    Users.associate = ((models) => {
+        Users.hasMany(models.Events, {
+          foreignKey: 'userId',
+          // as: 'events',
+        });
+      });
 
     return Users;
 };

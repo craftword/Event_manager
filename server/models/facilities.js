@@ -14,16 +14,14 @@ const Facilities = (sequelize, DataTypes) => {
           allowNull: false,
         },
                  
-    }, 
-    {
-        associate: (models) => {
-            Facilities.belongsTo(models.Centers, {
-                foreignKey: 'centerId',
-                onDelete: 'CASCADE',
-            });
-        },
     });
-    
+    Facilities.associate = (models) => {
+        Facilities.belongsTo(models.Centers, {
+          foreignKey: 'centerId',
+          onDelete: 'CASCADE',
+        });
+      };
+
     return Facilities;
 };
 

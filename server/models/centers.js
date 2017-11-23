@@ -38,20 +38,20 @@ const Centers = (sequelize, DataTypes) => {
           allowNull: false,
         },
           
-    }, 
-    {
-      classMethods: {
-          associate: (models) => {
-            Centers.hasMany(models.Events, {
-                  foreignKey: "centerId",
-                  as: "events", 
-              });
-              Centers.hasMany(models.Facilities, {
-                foreignKey: "centerId",
-                as: "facilities",
-            });
-          },
-      }
+    });
+  // class methods
+  Centers.associate = ((models) => {
+    Centesr.hasMany(models.Events, {
+      foreignKey: 'centerId',
+      // as: 'events',
+    });
+  });
+   // class methods
+   Centers.associate = ((models) => {
+    Centers.hasMany(models.Facilities, {
+      foreignKey: 'centerId',
+      // as: 'facilities',
+    });
   });
     
     return Centers;
