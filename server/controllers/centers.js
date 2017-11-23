@@ -49,12 +49,40 @@ const center = {
           .catch(error => res.status(400).send(error));
       },
 
-    put(req, res) {
+      update(req, res) {
+        return getCenter
+        .find({
+            where: {
+              id: req.params.centerId,              
+            },
+          })
+          .then(center => {
+            if (!center) {
+              return res.status(404).send({
+                message: 'Center Not Found',
+              });
+            }
+            return center
+            .update({
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                venueType: req.body.venueType,
+                address: req.body.address,
+                image: req.body.image,
+                location: req.body.location,
+                capacity: req.body.capacity,
+                policy: req.body.policy,
+                userId: req.body.userId,
+                
+             })                            
+            .then(result => res.status(201).send(result).json({center: "Updated successful" }))
+            .catch(error => res.status(400).send(error)); 
+          })
+          .catch(error => res.status(400).send(error));
+        },
 
-    },
-    destory(req, res) {
-
-    },
+    
 };
 
 export default center;
