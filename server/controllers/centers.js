@@ -1,11 +1,11 @@
 import models from "../models";
-const getCenter = models.Centers;
+const center = models.Centers;
 const Events = models.Events;
 
 
-const center = {
+const centerController = {
     create(req, res) {
-        return getCenter
+        return center
             .create({
                 name: req.body.name,
                 description: req.body.description,
@@ -19,18 +19,18 @@ const center = {
                                
             })
             .then(result => {
-               res.status(201).send(result)
+               res.status(201).send({result, message:"Center created"})
             })
-            .catch(error => res.status(400).send(error));
+            .catch(error => res.status(400).send(error.message));
     },
     list(req, res) {
-        return getCenter
+        return center
             .findAll()            
             .then(result => res.status(200).send(result))
-            .catch(error => res.status(400).send(error));
+            .catch(error => res.status(400).send(error.message));
     },
     view(req, res) {
-        return getCenter
+        return center
           .findById(req.params.centerId, {
             include: [{
               model: Events,
@@ -46,11 +46,11 @@ const center = {
             }
             return res.status(200).send(center);
           })
-          .catch(error => res.status(400).send(error));
+          .catch(error => res.status(400).send(error.message));
       },
 
       update(req, res) {
-        return getCenter
+        return center
         .find({
             where: {
               id: req.params.centerId,              
@@ -76,13 +76,13 @@ const center = {
                 userId: req.body.userId,
                 
              })                            
-            .then(result => res.status(201).send(result).json({center: "Updated successful" }))
-            .catch(error => res.status(400).send(error)); 
+            .then(result => res.status(201).send({result, message: "Updated successful" }))
+            .catch(error => res.status(400).send(error.message)); 
           })
-          .catch(error => res.status(400).send(error));
+          .catch(error => res.status(400).send(error.message));
         },
 
     
 };
 
-export default center;
+export default centerController;

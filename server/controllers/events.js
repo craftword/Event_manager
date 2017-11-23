@@ -1,5 +1,5 @@
 import models from "../models";
-const getEvent = models.Events;
+const Event = models.Events;
 
 const event = {
     // create a Event
@@ -13,9 +13,9 @@ const event = {
             })
             .then(count => {
                 if (count != 0) {
-                    res.status(401).json({event: "Date is already been booked" })
+                    res.status(401).json({message: "Center is already been booked" })
                 }else {
-                    getEvent.create({
+                    Event.create({
                         title: req.body.title,
                         description: req.body.description,
                         eventType: req.body.eventType,
@@ -28,29 +28,29 @@ const event = {
                         userId: req.body.userId,
                         centerId:req.body.centerId,
                     })
-                    .then(result => res.status(201).send(result).json({event: "Created successful" }))
-                    .catch(error => res.status(400).send(error));
+                    .then(result => res.status(201).send({result, message: "Created successful"}))
+                    .catch(error => res.status(400).send(error.message));
                 }       
             
             })
-            .catch(error => res.status(400).send(error));
+            .catch(error => res.status(400).send(error.message));
             
     },
     
     // view details of an event
     view(req, res) {
-        return getEvent
+        return Event
             .findAll({
                 where: {
                     id: req.params.eventId,              
                   },
             })            
             .then(result => res.status(200).send(result))
-            .catch(error => res.status(400).send(error));
+            .catch(error => res.status(400).send(error.message));
     },
     // update a Event
     update(req, res) {
-        return getEvent
+        return Event
         .find({
             where: {
               id: req.params.eventId,              
@@ -76,10 +76,10 @@ const event = {
                 userId: req.body.userId,
                 centerId:req.body.centerId,
              })                            
-            .then(result => res.status(201).send(result).json({event: "Updated successful" }))
-            .catch(error => res.status(400).send(error)); 
+            .then(result => res.status(201).send({result,message: "Updated successful"}))
+            .catch(error => res.status(400).send(error.message)); 
           })
-          .catch(error => res.status(400).send(error));
+          .catch(error => res.status(400).send(error.message));
 
     },
     // delete a Event
@@ -94,10 +94,10 @@ const event = {
             }
             return event
               .destroy()
-              .then(() => res.status(204).send({event: "Deleted successful" }))
-              .catch(error => res.status(400).send(error));
+              .then(() => res.status(204).send({message: "Deleted successful" }))
+              .catch(error => res.status(400).send(error.message));
           })
-          .catch(error => res.status(400).send(error));
+          .catch(error => res.status(400).send(error.message));
       },
 };
 

@@ -12,7 +12,8 @@ const secret_token = process.env.SECRET;
 
 const users = {
      create (req, res) {
-        const password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(8), null);
+        const password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(8), null); 
+            
         return createUser       
             .create({
                 email: req.body.email,
@@ -22,14 +23,29 @@ const users = {
                 phone: req.body.phone,
                 role:req.body.role            
             })
-            .then(users => res.status(201).json({
-                "fullname":users.fullname,
-                "email":users.email,
-                "id":users.id,
-                "username":users.username,
-                "role":users.role
-            }))
-            .catch(error => res.status(400).send(error)); 
+            .then(users =>
+                { 
+                    if(users) {
+                        const payload = {
+                            role: users.role,
+                            exp: Math.floor(Date.now() / 1000) + (60 * 60),
+                            data:users.username
+                        };
+                        
+                        const token = jwt.sign(payload, secret_token);
+                        res.status(201).json({
+                        user:{
+                        "fullname":users.fullname,
+                        "email":users.email,
+                        "username":users.username,
+                        "role":users.role,
+                         token: token
+
+                        }
+                    })
+                }
+            })
+            .catch(error => res.status(400).send(error.message)); 
     },
     signIn(req, res){
         
@@ -46,10 +62,7 @@ const users = {
                     //to compare password that user supplies in the future
                     let hash = user.password;
                     bcrypt.compare(req.body.password, hash, (err, doesMatch)=>{
-                        if (doesMatch){
-                            // if user is found and password is right
-                            // create a token
-                            // expire in one hour
+                        if (doesMatch){                           
                             const payload = {
                                 role: user.role,
                                 exp: Math.floor(Date.now() / 1000) + (60 * 60),
@@ -57,8 +70,6 @@ const users = {
                               };
                                
                             const token = jwt.sign(payload, secret_token);
-                            //console.log(token);
-                            // return the information including token as JSON
                             res.status(200).json({
                                 success: true,
                                 message: "Welcome Home!",
@@ -67,7 +78,7 @@ const users = {
                             });
         
                         }else{
-                        //go away
+                        
                             res.status(403).json({ success: false, message: "Authentication failed. Wrong password." });
                         }
                     });
