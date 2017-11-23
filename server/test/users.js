@@ -2,20 +2,13 @@ process.env.NODE_ENV = 'test';
 
 import request from "supertest";
 import { expect } from 'chai'
-import models from "../server/models";
-import app from "../app";
+import models from "../models";
+import app from "../../app";
 const Users = models.Users;
 const server = request.agent("http://localhost:9000");
 
 //Our parent block
-describe('API for SignIn and SignUp', () => {
-    /*Users.destroy({
-        cascade: true,
-        truncate: true,
-        restartIdentity: true
-    });  
-    */
- 
+describe('API for SignIn and SignUp', () => {    
     describe('Test for Models', ()=> {
         it('respond with json after signup', (done)=> {
             const prob = {
