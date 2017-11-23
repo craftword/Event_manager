@@ -21,7 +21,7 @@ const appApi = (app) => {
 
     // Centers Endpoints
     app.post("/api/v1/centers/", auth, checkAdmin,center.create);
-   
+    app.get("/api/v1/centers/:centerId", auth, center.view);
 };
 
 export default appApi;
