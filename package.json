@@ -9,7 +9,9 @@
     "babel-node": "babel-node --presets=latest",
     "start": "nodemon --exec npm run babel-node -- ./app",
     "build": "babel ./server/ -d ./dist",
-    "cover": "istanbul cover _mocha"
+    "cover": "istanbul cover _mocha",
+    "coverage": "istanbul cover _mocha -- --ui bdd -R spec -t 5000 --compilers js:babel-register --recursive "
+
   },
   "repository": {
     "type": "git",

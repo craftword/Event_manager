@@ -1,6 +1,7 @@
 ## Owanbe Event Management App
 
 [![Build Status](https://travis-ci.org/craftword/Event_manager.svg?branch=development)](https://travis-ci.org/craftword/Event_manager)
+[![Coverage Status](https://coveralls.io/repos/github/craftword/Event_manager/badge.svg?branch=development)](https://coveralls.io/github/craftword/Event_manager?branch=development)
 
 [Owanbe Event Management](https://craftword.github.io/Event_manager/index.html)
 
