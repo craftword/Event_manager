@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/craftword/Event_manager.git"
+    "url": "https://github.com/craftword/Event_manager.git"
   },
   "engines": {
     "node": "8.1.3",

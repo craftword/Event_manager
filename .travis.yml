@@ -10,7 +10,7 @@ cache:
   directories:
    - "node_modules"
 env:
-  - TEST_DBURL=TEST_URL
+  - TEST_DBURL=DATABASE_URL
 
 script:
   - npm test
