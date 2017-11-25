@@ -4,7 +4,7 @@ const Event = models.Events;
 const event = {
     // create a Event
     create(req, res) {
-        return getEvent
+        return Event
             .count({
                 where: { 
                     date:req.body.date
@@ -84,7 +84,7 @@ const event = {
     },
     // delete a Event
     destroy(req, res) {
-        return getEvent
+        return Event
           .findById(req.params.eventId)
           .then(event => {
             if (!event) {
@@ -94,7 +94,7 @@ const event = {
             }
             return event
               .destroy()
-              .then(() => res.status(204).send({message: "Deleted successful" }))
+              .then(() => res.status(204).send({message: "Deleted successful"}))
               .catch(error => res.status(400).send(error.message));
           })
           .catch(error => res.status(400).send(error.message));

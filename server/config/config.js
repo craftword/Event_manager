@@ -18,6 +18,7 @@ module.exports = {
     dialect: 'postgres'
   },
   production: {
-    dialect: 'mysql'
+    dialect: 'postgres',
+    url:process.env.HEROKU_POSTGRESQL_PURPLE_URL
   }
 };
