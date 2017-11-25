@@ -24,13 +24,21 @@ const centerController = {
             .catch(error => res.status(400).send(error.message));
     },
     list(req, res) {
+      //return res.status(400).send("Checkup app")
         return center
             .findAll()            
-            .then(result => res.status(200).send(result))
-            .catch(error => res.status(400).send(error.message));
+            .then(result => {
+              if (!result) {
+                return res.status(404).send({
+                  message: 'No Center Not Found',
+                });
+              }
+              return res.status(200).send(result);
+            })
+            .catch(error => res.status(400).send(error));
     },
     view(req, res) {
-        return center
+       return center
           .findById(req.params.centerId, {
             include: [{
               model: Events,
